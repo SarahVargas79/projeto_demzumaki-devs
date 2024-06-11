@@ -1,0 +1,146 @@
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    background-image: url('../imagens/fundo-base.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 150vh;
+}
+
+.cabecalho {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.cabecalho h1 {
+    color: rgba(12, 255, 32, 0.978);
+    font-size: 45px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.personagens-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.lista-personagens {
+    width: 330px;
+    height: 520px;
+    position: relative;
+}
+
+.btn-seta {
+    background-color: rgba(0, 250, 37, 0.72);
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-in-out;
+    box-shadow: rgb(255, 255, 255) 0px 5px 15px;
+}
+
+.btn-seta.btn-voltar {
+    transform: rotateY(180deg);
+}
+
+.btn-seta.btn-voltar img{
+    color: #ffffff;
+}
+
+.btn-seta:hover {
+    background-color: rgba(18, 221, 0, 0.952);
+}
+
+.cartao {
+    opacity: 0;
+    height: 100%;
+    position: absolute;
+    padding: 12px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+    transition: opacity 0.3s ease-in-out;
+    font-weight: 700;
+    display: flex;
+
+    /* 
+    Quando o flex-direction tem valor column
+    o justify-content alinha os filhos verticalmente
+    e o align-items alinha os filhos horizontalmente
+    no caso do flex-direction com valor row é o contrário
+  */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cartao.selecionado {
+    opacity: 1;
+    z-index: 1;
+}
+
+.cartao .imagem-personagem {
+    width: 100%;
+    max-height: 280px;
+}
+
+.cartao .nome {
+    background-color: #0acc00c9;
+    padding: 8px 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.cartao .descricao {
+    background-color: #0dff007e;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.cartao .descricao .titulo {
+    background-color: #0acc00c9;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 12px;
+}
+
+.cartao .descricao .texto {
+    color: #050505db;
+    font-size: 14px;
+    padding: 12px;
+    text-align: justify;
+    max-height: 110px;
+    overflow-y: auto;
+}
+
+.cartao.fundo-1 {
+    background: url('../imagens/fundo1.jpg') no-repeat;
+}
+
+.cartao.fundo-2 {
+    background: url('../imagens/fundo2.jpg') no-repeat;
+}
+
+.cartao.fundo-3 {
+    background: url('../imagens/fundo3.jpg') no-repeat;
+}
+
+.cartao.fundo-4 {
+    background: url('../imagens/fundo4.png') no-repeat;
+}
+
+.cartao.fundo-5 {
+    background: url('../imagens/fundo5.jpg') no-repeat;
+}
+
+.cartao.fundo-6 {
+    background: url('../imagens/fundo6.jpg') no-repeat;
+}
